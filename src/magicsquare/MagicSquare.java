@@ -43,7 +43,7 @@ public class MagicSquare {
         return result;
     }
 
-    static int[][] magicSquareDoublyEven(final int n) {
+    public static int[][] magicSquareDoublyEven(final int n) {
         if (n < 4 || n % 4 != 0)
             throw new IllegalArgumentException("base must be a positive "
                     + "multiple of 4");
@@ -64,7 +64,7 @@ public class MagicSquare {
         return result;
     }
 
-    static int[][] magicSquareSinglyEven(final int n) {
+    public static int[][] magicSquareSinglyEven(final int n) {
         if (n < 6 || (n - 2) % 4 != 0)
             throw new IllegalArgumentException("base must be a positive "
                     + "multiple of 4 plus 2");
@@ -105,7 +105,7 @@ public class MagicSquare {
         return result;
     }
 
-    static void printResult(int[][] grid, final int n) {
+    private static void printResult(int[][] grid, final int n) {
         if (!check(grid, n))
             System.out.println("ERROR");
 
@@ -121,7 +121,7 @@ public class MagicSquare {
         }
     }
 
-    static boolean check(int[][] grid, final int n) {
+    private static boolean check(int[][] grid, final int n) {
         int sum = (n * n + 1) * n / 2;
         int sumDiagUp = 0, sumDiagDown = 0, sumRow = 0, sumCol = 0;
 
